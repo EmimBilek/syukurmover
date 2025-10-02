@@ -117,7 +117,7 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-4 shadow-lg">
-                <Truck className="h-8 w-8 text-blue-600 mx-auto mt-1" />
+                <Truck className="h-8 w-8 text-blue-600 mx-auto" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">
                 Armada Lengkap
@@ -128,7 +128,7 @@ const AboutSection = () => {
             </div>
             <div className="text-center">
               <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-4 shadow-lg">
-                <Shield className="h-8 w-8 text-orange-600 mx-auto mt-1" />
+                <Shield className="h-8 w-8 text-orange-600 mx-auto" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">
                 Berlisensi & Asuransi
@@ -139,7 +139,7 @@ const AboutSection = () => {
             </div>
             <div className="text-center">
               <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-4 shadow-lg">
-                <Award className="h-8 w-8 text-blue-600 mx-auto mt-1" />
+                <Award className="h-8 w-8 text-blue-600 mx-auto" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">
                 Tim Profesional
@@ -150,7 +150,7 @@ const AboutSection = () => {
             </div>
             <div className="text-center">
               <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-4 shadow-lg">
-                <Clock className="h-8 w-8 text-orange-600 mx-auto mt-1" />
+                <Clock className="h-8 w-8 text-orange-600 mx-auto" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">24/7 Support</h4>
               <p className="text-sm text-gray-600">
