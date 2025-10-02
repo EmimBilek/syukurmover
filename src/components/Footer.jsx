@@ -121,9 +121,9 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Jl. Sudirman No. 123, Senayan
+                    Jl. Suralaya No. 49, Kec. Cipayung, Kel. Cilangkap
                     <br />
-                    Jakarta Pusat 10270, Indonesia
+                    Jakarta Timur 13870, Indonesia
                   </p>
                 </div>
               </div>
@@ -131,8 +131,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-orange-500 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">+62 812-3456-7890</p>
-                  <p className="text-gray-300 text-sm">+62 21-5555-4444</p>
+                  <p className="text-gray-300 text-sm">+62 819-1111-9998</p>
                 </div>
               </div>
 

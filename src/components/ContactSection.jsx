@@ -53,13 +53,14 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Alamat Kantor",
-      content: "Jl. Sudirman No. 123, Senayan\nJakarta Pusat 10270, Indonesia",
+      content:
+        "Jl. Suralaya No. 49, Kec. Cipayung, Kel. Cilangkap\nJakarta Timur 13870, Indonesia",
       color: "blue",
     },
     {
       icon: Phone,
       title: "Telepon",
-      content: "+62 812-3456-7890\n+62 21-5555-4444",
+      content: "+62 819-1111-9998",
       color: "orange",
     },
     {
