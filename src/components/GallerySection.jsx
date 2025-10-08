@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Card, CardContent } from './ui/card';
-import { X, ArrowLeft, ArrowRight } from 'lucide-react';
+import React, { useState } from "react";
+import { Card, CardContent } from "./ui/card";
+import { X, ArrowLeft, ArrowRight } from "lucide-react";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -10,33 +10,34 @@ const GallerySection = () => {
     {
       url: "https://images.unsplash.com/flagged/photo-1594051723956-b14e836bdeb5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtb3ZlcnN8ZW58MHx8fHwxNzU5MzAxNTY4fDA&ixlib=rb-4.1.0&q=85",
       title: "Layanan Packing Profesional",
-      description: "Tim kami membantu mengemas barang dengan aman dan rapi"
+      description: "Tim kami membantu mengemas barang dengan aman dan rapi",
     },
     {
       url: "https://images.unsplash.com/photo-1694715669993-ea0022b470f7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBtb3ZlcnN8ZW58MHx8fHwxNzU5MzAxNTY4fDA&ixlib=rb-4.1.0&q=85",
       title: "Proses Loading Barang",
-      description: "Pemuatan barang ke truk dengan hati-hati dan sistematis"
+      description: "Pemuatan barang ke truk dengan hati-hati dan sistematis",
     },
     {
       url: "https://images.unsplash.com/photo-1600518464441-9154a4dea21b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxtb3ZpbmclMjB0cnVja3xlbnwwfHx8fDE3NTkzMDE1NzR8MA&ixlib=rb-4.1.0&q=85",
       title: "Armada Truk Profesional",
-      description: "Berbagai ukuran truk untuk kebutuhan pindahan Anda"
+      description: "Berbagai ukuran truk untuk kebutuhan pindahan Anda",
     },
     {
       url: "https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxob3VzZSUyMG1vdmluZ3xlbnwwfHx8fDE3NTkzMDE1Nzh8MA&ixlib=rb-4.1.0&q=85",
       title: "Persiapan Barang Pindahan",
-      description: "Barang dikemas dengan rapi siap untuk dipindahkan"
+      description: "Barang dikemas dengan rapi siap untuk dipindahkan",
     },
     {
       url: "https://images.pexels.com/photos/7464687/pexels-photo-7464687.jpeg",
       title: "Tim Movers Berpengalaman",
-      description: "Pekerja profesional yang berpengalaman dalam menangani berbagai jenis barang"
+      description:
+        "Pekerja profesional yang berpengalaman dalam menangani berbagai jenis barang",
     },
     {
       url: "https://images.pexels.com/photos/8963079/pexels-photo-8963079.jpeg",
       title: "Hasil Packing yang Rapi",
-      description: "Barang tertata rapi dan siap untuk proses pemindahan"
-    }
+      description: "Barang tertata rapi dan siap untuk proses pemindahan",
+    },
   ];
 
   const openModal = (image, index) => {
@@ -55,28 +56,29 @@ const GallerySection = () => {
   };
 
   const prevImage = () => {
-    const prevIndex = currentIndex === 0 ? galleryImages.length - 1 : currentIndex - 1;
+    const prevIndex =
+      currentIndex === 0 ? galleryImages.length - 1 : currentIndex - 1;
     setSelectedImage(galleryImages[prevIndex]);
     setCurrentIndex(prevIndex);
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowRight') nextImage();
-    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") prevImage();
   };
 
   React.useEffect(() => {
     if (selectedImage) {
-      document.addEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
-    
+
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
     };
   }, [selectedImage, currentIndex]);
 
@@ -96,13 +98,13 @@ const GallerySection = () => {
         {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryImages.map((image, index) => (
-            <Card 
+            <Card
               key={index}
               className="group cursor-pointer overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2"
               onClick={() => openModal(image, index)}
             >
               <div className="relative overflow-hidden">
-                <img 
+                <img
                   src={image.url}
                   alt={image.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -123,31 +125,31 @@ const GallerySection = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
             <div className="relative max-w-4xl w-full max-h-full">
               {/* Close Button */}
-              <button 
+              <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-10 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-200"
+                className="absolute top-4 right-4 z-10 p-2 bg-black/20 hover:bg-black/30 rounded-full text-white transition-all duration-200"
               >
                 <X className="h-6 w-6" />
               </button>
 
               {/* Navigation Buttons */}
-              <button 
+              <button
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-200"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/20 hover:bg-black/30 rounded-full text-white transition-all duration-200"
               >
                 <ArrowLeft className="h-6 w-6" />
               </button>
-              
-              <button 
+
+              <button
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-200"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/20 hover:bg-black/30 rounded-full text-white transition-all duration-200"
               >
                 <ArrowRight className="h-6 w-6" />
               </button>
 
               {/* Image */}
               <div className="bg-white rounded-lg overflow-hidden shadow-2xl">
-                <img 
+                <img
                   src={selectedImage.url}
                   alt={selectedImage.title}
                   className="w-full h-auto max-h-[70vh] object-contain"
@@ -156,14 +158,12 @@ const GallerySection = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     {selectedImage.title}
                   </h3>
-                  <p className="text-gray-600">
-                    {selectedImage.description}
-                  </p>
+                  <p className="text-gray-600">{selectedImage.description}</p>
                 </div>
               </div>
 
               {/* Image Counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/10 rounded-full text-white text-sm">
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/20 rounded-full text-white text-sm">
                 {currentIndex + 1} / {galleryImages.length}
               </div>
             </div>
@@ -177,13 +177,14 @@ const GallerySection = () => {
               Ingin Melihat Hasil Kerja Kami Langsung?
             </h3>
             <p className="text-lg text-gray-600 mb-8">
-              Hubungi kami untuk survei lokasi gratis dan dapatkan pengalaman pindahan terbaik
+              Hubungi kami untuk survei lokasi gratis dan dapatkan pengalaman
+              pindahan terbaik
             </p>
-            <button 
+            <button
               onClick={() => {
-                const element = document.querySelector('#contact');
+                const element = document.querySelector("#contact");
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
+                  element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"

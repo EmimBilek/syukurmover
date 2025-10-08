@@ -12,21 +12,22 @@ const AboutSection = () => {
             Tentang <span className="text-blue-600">SyukurMover</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Partner terpercaya untuk semua kebutuhan pindahan Anda sejak 2018
+            Partner terpercaya untuk semua kebutuhan pindahan Anda
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           {/* Company Description */}
           <div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               Solusi Pindahan Terpercaya di Indonesia
             </h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              SyukurMover adalah perusahaan jasa pindahan profesional yang telah
-              melayani ribuan keluarga dan perusahaan di seluruh Indonesia.
-              Dengan pengalaman lebih dari 5 tahun, kami memahami betapa
-              pentingnya proses pindahan yang aman, cepat, dan terpercaya.
+              SyukurMover adalah perusahaan jasa pindahan profesional yang
+              berfokus pada memberikan pengalaman pindahan yang aman, cepat, dan
+              nyaman bagi pelanggan di sejumlah kota di Indonesia. Dengan
+              pengalaman yang terus berkembang, kami memahami betapa pentingnya
+              proses pindahan yang aman, cepat, dan terpercaya.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Tim kami terdiri dari profesional berpengalaman yang telah
@@ -36,7 +37,7 @@ const AboutSection = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            {/* <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-4 bg-blue-50 rounded-xl">
                 <div className="text-3xl font-bold text-blue-600 mb-2">
                   500+
@@ -53,7 +54,7 @@ const AboutSection = () => {
                   Tahun Pengalaman
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Mission & Vision Cards */}

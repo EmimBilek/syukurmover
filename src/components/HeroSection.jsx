@@ -73,8 +73,8 @@ const HeroSection = () => {
                   Terpercaya & Aman
                 </h3>
                 <p className="text-gray-600">
-                  Tim profesional berpengalaman dengan asuransi penuh untuk
-                  keamanan barang Anda
+                  Layanan pindahan dengan asuransi penuh untuk keamanan barang
+                  Anda
                 </p>
               </div>
 
@@ -96,11 +96,11 @@ const HeroSection = () => {
                   <Users className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Tim Berpengalaman
+                  Tim Profesional
                 </h3>
                 <p className="text-gray-600">
-                  Pekerja terlatih dengan pengalaman bertahun-tahun dalam jasa
-                  pindahan profesional
+                  Pekerja terlatih yang ahli dalam menangani setiap proses
+                  pindahan secara profesional dan efisien.
                 </p>
               </div>
             </div>

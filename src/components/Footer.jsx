@@ -58,7 +58,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-white mb-4">SyukurMover</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Partner terpercaya untuk semua kebutuhan pindahan Anda. Melayani
-              dengan profesional sejak 2018.
+              dengan profesional.
             </p>
 
             {/* Features Icons */}
